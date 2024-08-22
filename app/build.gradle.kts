@@ -55,6 +55,17 @@ android {
     }
 }
 
+apollo{
+    //you can give your own name
+    service("first_time"){
+        packageName.set("src.main.graphql")
+        introspection{
+            endpointUrl = "https://countries.trevorblades.com/"
+            schemaFile.set(file("src/main/graphql/com.swagatmali.graphql/schema.sdl"))
+        }
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
